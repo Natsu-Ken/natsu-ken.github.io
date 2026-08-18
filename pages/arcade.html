@@ -28,8 +28,8 @@
             letter-spacing: 2px;
         }
 
-        .arcade-page p {
-            margin-bottom: 10px;
+        .arcade-page .platform-description {
+            margin-bottom: 15px;
             font-size: 14px;
             text-align: center;
         }
@@ -41,16 +41,20 @@
         }
 
         .game-list li {
-            padding: 10px 0;
+            padding: 12px 0;
             border-bottom: 1px solid #808080;
             text-align: center;
+        }
+
+        .game-list li:last-child {
+            border-bottom: none;
         }
 
         .game-list li a {
             color: #0000FF;
             text-decoration: none;
             font-weight: bold;
-            font-size: 14px;
+            font-size: 15px;
         }
 
         .game-list li a:hover {
@@ -82,12 +86,12 @@
 
     <div class="arcade-page">
         <h1>🕹️ ARCADE</h1>
-        <p>Игры для платформы Arcade, поддерживаемые RetroAchievements.</p>
+        <p class="platform-description">Игры для платформы Arcade, поддерживаемые RetroAchievements.</p>
         
         <ul class="game-list">
-            <li><a href="#">Resident Evil: Arcade</a></li>
-            <li><a href="#">Resident Evil: Gun Survivor</a></li>
-            <li><a href="#">Resident Evil: Dead Aim</a></li>
+            <li>
+                <a href="#" onclick="parent.loadPage('gunsur2')">Gun Survivor 2 BIOHAZARD CODE: Veronica</a>
+            </li>
         </ul>
         
         <div class="back-link">
