@@ -20,45 +20,15 @@
 
         <!-- НАВИГАЦИЯ -->
         <div id="navbar">
-            <a href="#">ГЛАВНАЯ</a> |
-            <a href="#">ИГРЫ</a> |
-            <a href="#">ДОСТИЖЕНИЯ</a> |
-            <a href="#">СООБЩЕСТВО</a>
+            <a href="#" onclick="loadPage('home')">ГЛАВНАЯ</a> |
+            <a href="#" onclick="loadPage('games')">ИГРЫ</a> |
+            <a href="#" onclick="loadPage('achievements')">ДОСТИЖЕНИЯ</a> |
+            <a href="#" onclick="loadPage('community')">СООБЩЕСТВО</a>
         </div>
 
-        <!-- ОСНОВНОЙ КОНТЕНТ -->
+        <!-- ОСНОВНОЙ КОНТЕНТ (IFRAME) -->
         <div id="main">
-            <h1>ДОБРО ПОЖАЛОВАТЬ В АРХИВ</h1>
-            <p>Архив игр серии Resident Evil, поддерживаемых платформой RetroAchievements.</p>
-            <p>Выберите платформу ниже, чтобы просмотреть доступные игры.</p>
-
-            <!-- БЛОК С ПЛАТФОРМАМИ -->
-            <div id="platforms">
-                <div class="platform-block">
-                    <a href="#">
-                        <span class="platform-icon">&#9724;</span> <!-- Квадрат -->
-                        <span class="platform-name">PLAYSTATION</span>
-                    </a>
-                </div>
-                <div class="platform-block">
-                    <a href="#">
-                        <span class="platform-icon">&#9679;</span> <!-- Круг -->
-                        <span class="platform-name">SEGA SATURN</span>
-                    </a>
-                </div>
-                <div class="platform-block">
-                    <a href="#">
-                        <span class="platform-icon">&#9650;</span> <!-- Треугольник -->
-                        <span class="platform-name">NINTENDO 64</span>
-                    </a>
-                </div>
-                <div class="platform-block">
-                    <a href="#">
-                        <span class="platform-icon">&#9670;</span> <!-- Ромб -->
-                        <span class="platform-name">GAMECUBE</span>
-                    </a>
-                </div>
-            </div>
+            <iframe id="content-frame" src="pages/home.html" style="width:100%; height:530px; border:none;"></iframe>
         </div>
 
         <!-- ПОДВАЛ -->
@@ -66,6 +36,24 @@
             &copy; 2026 RESIDENT EVIL ARCHIVE. ВСЕ ПРАВА ЗАЩИЩЕНЫ.
         </div>
     </div>
+
+    <script>
+        function loadPage(page) {
+            const frame = document.getElementById('content-frame');
+            
+            if (page === 'home') {
+                frame.src = 'pages/home.html';
+            } else if (page === 'arcade') {      // ← ДОБАВЛЕНО
+                frame.src = 'pages/arcade.html';
+            } else if (page === 'games') {
+                frame.src = 'pages/games.html';
+            } else if (page === 'achievements') {
+                frame.src = 'pages/achievements.html';
+            } else if (page === 'community') {
+                frame.src = 'pages/community.html';
+            }
+        }
+    </script>
 
 </body>
 </html>
