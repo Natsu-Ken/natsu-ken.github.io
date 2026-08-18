@@ -5,7 +5,6 @@
     <title>Resident Evil Archive - Главная</title>
     <link rel="stylesheet" href="../style.css">
     <style>
-        /* Стили для iframe (убираем фон, чтобы был прозрачным) */
         body { 
             background: transparent; 
             font-family: Arial, Helvetica, sans-serif;
@@ -13,11 +12,10 @@
             margin: 0;
         }
         
-        /* Копируем стили из основного CSS для совместимости */
         #main {
             background-color: #D0D0D0;
             border: 2px inset #808080;
-            padding: 15px;
+            padding: 12px 15px 15px 15px;  /* ← 15px → 12px (только верх) */
             margin-bottom: 0;
         }
 
@@ -26,13 +24,13 @@
             color: #000000;
             border-bottom: 2px solid #808080;
             padding-bottom: 5px;
-            margin-bottom: 10px;
+            margin-bottom: 8px;           /* ← 10px → 8px */
             text-align: center;
             letter-spacing: 2px;
         }
 
         #main p {
-            margin-bottom: 10px;
+            margin-bottom: 6px;           /* ← 10px → 6px */
             font-size: 14px;
             text-align: center;
         }
@@ -42,15 +40,15 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 12px;
-            margin-top: 15px;
-            padding: 10px;
+            margin-top: 10px;            /* ← 15px → 10px */
+            padding: 8px 10px;           /* ← 10px → 8px (только верх/низ) */
             background-color: #C0C0C0;
             border: 2px outset #FFFFFF;
         }
 
         .platform-block {
             flex: 0 1 160px;
-            min-height: 120px;
+            min-height: 115px;           /* ← 120px → 115px */
             background-color: #CCCCCC;
             border: 3px outset #FFFFFF;
             text-align: center;
