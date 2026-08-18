@@ -1,286 +1,188 @@
-/* =========================================
-   RESIDENT EVIL ARCHIVE
-   Early 2000s Web Style
-   ========================================= */
+/* ============================================
+   ОСНОВНОЙ СТИЛЬ - РЕТРО 90-х / НАЧАЛА 2000-х
+   Цвета: web-safe, "грязный" серый фон, синие ссылки
+   ============================================ */
 
-
-/* PAGE */
-
-html,
-body {
+/* --- ГЛОБАЛЬНЫЕ НАСТРОЙКИ --- */
+* {
     margin: 0;
     padding: 0;
-    min-height: 100%;
+    box-sizing: border-box;
 }
-
-
-/* OLD WEB BACKGROUND */
 
 body {
-    background-color: #8a8a8a;
-
+    /* Тот самый "грязный" серый фон. #999 - классика 90-х */
+    background-color: #999999;
+    /* Имитация шума/зернистости с помощью CSS-градиента */
     background-image:
-        radial-gradient(
-            rgba(255, 255, 255, 0.08) 1px,
-            transparent 1px
-        ),
-        radial-gradient(
-            rgba(0, 0, 0, 0.08) 1px,
-            transparent 1px
-        );
-
-    background-position:
-        0 0,
-        2px 2px;
-
-    background-size:
-        4px 4px,
-        4px 4px;
-
-    color: #111;
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
+        radial-gradient(circle at 10% 20%, rgba(0,0,0,0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255,255,255,0.05) 0%, transparent 50%),
+        repeating-linear-gradient(45deg, rgba(0,0,0,0.02) 0px, rgba(0,0,0,0.02) 2px, transparent 2px, transparent 4px);
+    font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+    font-size: 14px;
+    color: #000000;
+    padding: 20px;
+    /* Центрируем контейнер по горизонтали */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
 }
 
-
-/* MAIN SITE */
-
-.site {
-    width: 1000px;
-
-    margin:
-        8px auto
-        20px auto;
-
-    background: #d2d2d2;
-
-    border:
-        1px solid #222;
-
-    box-shadow:
-        0 0 0 2px #777;
-
-    min-height: 900px;
+/* --- ОСНОВНОЙ КОНТЕЙНЕР --- */
+#container {
+    max-width: 800px;
+    width: 100%;
+    background-color: #C0C0C0; /* Светло-серый для контента */
+    border: 4px outset #FFFFFF; /* Выпуклая рамка, как у старых окон */
+    padding: 15px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6); /* Тень для объёма */
 }
 
-
-/* HEADER */
-
-.header {
+/* --- ШАПКА (HEADER) --- */
+#header {
+    background-color: #CCCCCC;
+    border: 2px inset #808080; /* Вдавленная рамка */
+    padding: 15px 10px;
+    margin-bottom: 10px;
     text-align: center;
-
-    border-bottom:
-        2px solid #222;
-
-    padding:
-        25px 20px 20px 20px;
-
-    background:
-        linear-gradient(
-            #eeeeee,
-            #c6c6c6
-        );
 }
 
-
-/* LOGO */
-
-.logo-area {
-    margin-bottom: 15px;
+.logo {
+    line-height: 1.2;
 }
 
 .logo-main {
-    display: inline-block;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 64px;
-
+    font-size: 32px;
     font-weight: bold;
-
-    letter-spacing: -4px;
-
-    color: #111;
-
-    text-shadow:
-        2px 2px 0 #777,
-        4px 4px 0 #ddd;
+    color: #000000;
+    letter-spacing: 4px;
+    display: block;
+    text-shadow: 2px 2px 0px #808080; /* Примитивная тень для текста */
 }
 
-.logo-subtitle {
-    margin-top: -5px;
-
+.logo-sub {
     font-size: 28px;
-
     font-weight: bold;
-
+    color: #990000; /* Тёмно-красный, как на старых сайтах Capcom */
     letter-spacing: 8px;
-
-    color: #4a0000;
+    display: block;
 }
 
-
-.welcome {
-    font-size: 13px;
-
-    font-weight: bold;
-
-    letter-spacing: 1px;
-}
-
-
-/* CONTENT */
-
-main {
-    padding:
-        20px 35px 40px 35px;
-}
-
-
-/* INTRO */
-
-.intro {
-    text-align: center;
-
-    padding:
-        15px 40px 25px 40px;
-
-    border-bottom:
-        1px solid #555;
-}
-
-.intro h1 {
-    margin:
-        5px 0 15px 0;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 25px;
-
-    letter-spacing: 2px;
-}
-
-.intro p {
-    margin:
-        6px 0;
-
-    font-size: 13px;
-}
-
-
-/* PLATFORM AREA */
-
-.platforms {
-    display: flex;
-
-    justify-content: center;
-
-    align-items: flex-end;
-
-    gap: 20px;
-
-    padding:
-        35px 10px 20px 10px;
-}
-
-
-/* PLATFORM LINK */
-
-.platform {
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    justify-content: flex-end;
-
-    width: 190px;
-
-    min-height: 235px;
-
-    color: #111;
-
-    text-decoration: none;
-}
-
-
-/* CHARACTER */
-
-.platform img {
-    max-width: 170px;
-
-    max-height: 190px;
-
-    object-fit: contain;
-
-    image-rendering: auto;
-
-    margin-bottom: 8px;
-}
-
-
-/* PLATFORM TITLE */
-
-.platform span {
-    width: 100%;
-
-    padding:
-        5px 0;
-
-    border-top:
-        1px solid #333;
-
+.tagline {
+    margin-top: 5px;
     font-size: 12px;
-
     font-weight: bold;
-
-    text-align: center;
-
+    color: #0000AA; /* Тёмно-синий */
+    background-color: #DDDDDD;
+    border: 1px solid #808080;
+    padding: 3px 0;
     letter-spacing: 1px;
 }
 
-
-/* OLD WEB HOVER */
-
-.platform:hover span {
-    background: #c0c0c0;
-}
-
-.platform:hover img {
-    filter:
-        brightness(1.08);
-}
-
-
-/* FOOTER */
-
-footer {
+/* --- НАВИГАЦИЯ --- */
+#navbar {
+    background-color: #CCCCCC;
+    border: 2px inset #808080;
+    padding: 5px 0;
+    margin-bottom: 10px;
     text-align: center;
-
-    padding:
-        20px 10px 30px 10px;
+    font-size: 15px;
+    font-weight: bold;
+    word-spacing: 4px;
 }
 
-.footer-line {
-    height: 1px;
-
-    background: #555;
-
-    margin-bottom: 12px;
+#navbar a {
+    color: #0000FF; /* Классический синий для ссылок */
+    text-decoration: none;
+    padding: 0 5px;
 }
 
-.footer-text {
-    font-size: 11px;
+#navbar a:hover {
+    color: #FF0000; /* Красный при наведении, как в старых браузерах */
+    text-decoration: underline;
+}
 
+#navbar a:visited {
+    color: #800080; /* Фиолетовый для посещённых */
+}
+
+/* --- ОСНОВНОЙ БЛОК --- */
+#main {
+    background-color: #D0D0D0;
+    border: 2px inset #808080;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+#main h1 {
+    font-size: 22px;
+    color: #000000;
+    border-bottom: 2px solid #808080;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    text-align: center;
     letter-spacing: 2px;
+}
+
+#main p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* --- БЛОК С ПЛАТФОРМАМИ --- */
+#platforms {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #C0C0C0;
+    border: 2px outset #FFFFFF;
+}
+
+.platform-block {
+    flex: 0 1 150px; /* Базовая ширина 150px, перенос при необходимости */
+    background-color: #CCCCCC;
+    border: 3px outset #FFFFFF;
+    text-align: center;
+    transition: all 0.15s ease;
+}
+
+.platform-block:hover {
+    border: 3px inset #FFFFFF; /* При наведении рамка "вдавливается" */
+    background-color: #BBBBBB;
+}
+
+.platform-block a {
+    display: block;
+    padding: 15px 5px;
+    color: #0000FF;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.platform-block a:visited {
+    color: #800080;
+}
+
+.platform-icon {
+    display: block;
+    font-size: 28px;
+    margin-bottom: 5px;
+    color: #000000;
+}
+
+/* --- ПОДВАЛ --- */
+#footer {
+    background-color: #CCCCCC;
+    border: 2px inset #808080;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 11px;
+    color: #333333;
+    letter-spacing: 1px;
 }
