@@ -1,100 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Resident Evil Archive</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="site">
-
-    <!-- HEADER -->
-
-    <header class="header">
-
-        <div class="logo-area">
-            <div class="logo-main">
-                RESIDENT EVIL
+    <div id="container">
+        <!-- ШАПКА САЙТА -->
+        <div id="header">
+            <div class="logo">
+                <span class="logo-main">RESIDENT EVIL</span>
+                <span class="logo-sub">ARCHIVE</span>
             </div>
+            <div class="tagline">WELCOME TO THE RESIDENT EVIL ARCHIVE</div>
+        </div>
 
-            <div class="logo-subtitle">
-                ARCHIVE
+        <!-- НАВИГАЦИЯ -->
+        <div id="navbar">
+            <a href="#">ГЛАВНАЯ</a> |
+            <a href="#">ИГРЫ</a> |
+            <a href="#">ДОСТИЖЕНИЯ</a> |
+            <a href="#">СООБЩЕСТВО</a>
+        </div>
+
+        <!-- ОСНОВНОЙ КОНТЕНТ -->
+        <div id="main">
+            <h1>ДОБРО ПОЖАЛОВАТЬ В АРХИВ</h1>
+            <p>Архив игр серии Resident Evil, поддерживаемых платформой RetroAchievements.</p>
+            <p>Выберите платформу ниже, чтобы просмотреть доступные игры.</p>
+
+            <!-- БЛОК С ПЛАТФОРМАМИ -->
+            <div id="platforms">
+                <div class="platform-block">
+                    <a href="#">
+                        <span class="platform-icon">&#9724;</span> <!-- Квадрат -->
+                        <span class="platform-name">PLAYSTATION</span>
+                    </a>
+                </div>
+                <div class="platform-block">
+                    <a href="#">
+                        <span class="platform-icon">&#9679;</span> <!-- Круг -->
+                        <span class="platform-name">SEGA SATURN</span>
+                    </a>
+                </div>
+                <div class="platform-block">
+                    <a href="#">
+                        <span class="platform-icon">&#9650;</span> <!-- Треугольник -->
+                        <span class="platform-name">NINTENDO 64</span>
+                    </a>
+                </div>
+                <div class="platform-block">
+                    <a href="#">
+                        <span class="platform-icon">&#9670;</span> <!-- Ромб -->
+                        <span class="platform-name">GAMECUBE</span>
+                    </a>
+                </div>
             </div>
         </div>
 
-        <div class="welcome">
-            WELCOME TO THE RESIDENT EVIL ARCHIVE
+        <!-- ПОДВАЛ -->
+        <div id="footer">
+            &copy; 2026 RESIDENT EVIL ARCHIVE. ВСЕ ПРАВА ЗАЩИЩЕНЫ.
         </div>
-
-    </header>
-
-
-    <!-- INFORMATION -->
-
-    <main>
-
-        <section class="intro">
-
-            <h1>RESIDENT EVIL ARCHIVE</h1>
-
-            <p>
-                An archive of Resident Evil games supported by RetroAchievements.
-            </p>
-
-            <p>
-                Select a platform below to browse the available games.
-            </p>
-
-        </section>
-
-
-        <!-- PLATFORM NAVIGATION -->
-
-        <section class="platforms">
-
-            <a href="ps1/" class="platform">
-                <img src="images/characters/ps1.png" alt="PlayStation">
-                <span>PLAYSTATION</span>
-            </a>
-
-            <a href="ps2/" class="platform">
-                <img src="images/characters/ps2.png" alt="PlayStation 2">
-                <span>PLAYSTATION 2</span>
-            </a>
-
-            <a href="gamecube/" class="platform">
-                <img src="images/characters/gamecube.png" alt="GameCube">
-                <span>GAMECUBE</span>
-            </a>
-
-            <a href="pc/" class="platform">
-                <img src="images/characters/pc.png" alt="PC">
-                <span>PC</span>
-            </a>
-
-        </section>
-
-    </main>
-
-
-    <!-- FOOTER -->
-
-    <footer>
-
-        <div class="footer-line"></div>
-
-        <div class="footer-text">
-            RESIDENT EVIL ARCHIVE
-        </div>
-
-    </footer>
-
-</div>
+    </div>
 
 </body>
 </html>
