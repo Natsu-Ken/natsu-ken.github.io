@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Resident Evil Archive - Главная</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* Стили для iframe (убираем фон, чтобы был прозрачным) */
+        body { 
+            background: transparent; 
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+        
+        /* Копируем стили из основного CSS для совместимости */
+        #main {
+            background-color: #D0D0D0;
+            border: 2px inset #808080;
+            padding: 15px;
+            margin-bottom: 0;
+        }
+
+        #main h1 {
+            font-size: 22px;
+            color: #000000;
+            border-bottom: 2px solid #808080;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+        #main p {
+            margin-bottom: 10px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        #platforms {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #C0C0C0;
+            border: 2px outset #FFFFFF;
+        }
+
+        .platform-block {
+            flex: 0 1 160px;
+            min-height: 120px;
+            background-color: #CCCCCC;
+            border: 3px outset #FFFFFF;
+            text-align: center;
+            transition: all 0.15s ease;
+        }
+
+        .platform-block:hover {
+            border: 3px inset #FFFFFF;
+            background-color: #BBBBBB;
+        }
+
+        .platform-block a {
+            display: block;
+            padding: 12px 5px;
+            color: #0000FF;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        .platform-block a:visited {
+            color: #800080;
+        }
+
+        .platform-icon {
+            display: block;
+            font-size: 54px;
+            margin-bottom: 4px;
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="main">
+        <h1>ДОБРО ПОЖАЛОВАТЬ В АРХИВ</h1>
+        <p>Архив игр серии Resident Evil, поддерживаемых платформой RetroAchievements.</p>
+        <p>Выберите платформу ниже, чтобы просмотреть доступные игры.</p>
+
+        <!-- БЛОК С ПЛАТФОРМАМИ (15 штук, 3 ряда по 5) -->
+        <div id="platforms">
+            
+            <!-- РЯД 1 -->
+            <div class="platform-block">
+                <a href="#" onclick="parent.loadPage('arcade')">
+                    <span class="platform-icon">&#9724;</span>
+                    <span class="platform-name">ARCADE</span>
+                </a>
+            </div>
+            <div class="platform-block">
+                <a href="#">
+                    <span class="platform-icon">&#9679;</span>
+                    <span class="platform-name">DREAMCAST</span>
+                </a>
+            </div>
+            <div class="platform-block">
+                <a href="#">
+                    <span class="platform-icon">&#9650;</span>
+                    <span class="platform-name">NINTENDO DS</span>
+                </a>
+            </div>
+            <div class="platform-block">
+                <a href="#">
+                    <span class="platform-icon">&#9670;</span>
+                    <span class="platform-name">GAME BOY</span>
+                </a>
+            </div>
+            <div class="platform-block">
+                <a href="#">
+                    <span class="platform-icon">&#9724;</span>
+                    <span class="platform-name">GAME BOY COLOR</span>
+                </a>
+            </div>
+
+            <!-- РЯД 2 -->
+            <div class="platform-block">
+                <a href="#">
+                    <span class="platform-icon">&#9679;</span>
+                    <span class="platform-name">GAME BOY ADVANCE</span>
+                </a>
+            </div>
+            <div class="platform-block">
+                <a href="#">
+                    <span class="platform-icon">&#9650;</span>
+                    <span class="platform-name">GAMECUBE</span>
+                </a>
+            </div>
+            <div class="platform-block">
+                <a href="#">
+                    <span class="platform-icon">&#9670;</span>
+                    <span class="platform-name">NINTENDO 64</span>
+                </a>
+            </div>
+            <div class="platform-block">
+                <a href="#">
+                    <span class="platform-icon">&#9724;</span>
+                    <span class="platform-name">NES</span>
+                </a>
+            </div>
+            <div class="platform-block">
+                <a href="#">
+                    <span class="platform-icon">&#9679;</span>
+                    <span class="platform-name">PLAYSTATION</span>
+                </a>
+            </div>
+
+            <!-- РЯД 3 -->
+            <div class="platform-block">
+                <a href="#">
+                    <span class="platform-icon">&#9650;</span>
+                    <span class="platform-name">PLAYSTATION 2</span>
+                </a>
+            </div>
+            <div class="platform-block">
+                <a href="#">
+                    <span class="platform-icon">&#9670;</span>
+                    <span class="platform-name">SEGA SATURN</span>
+                </a>
+            </div>
+            <div class="platform-block">
+                <a href="#">
+                    <span class="platform-icon">&#9724;</span>
+                    <span class="platform-name">WII</span>
+                </a>
+            </div>
+            <div class="platform-block">
+                <a href="#">
+                    <span class="platform-icon">&#9679;</span>
+                    <span class="platform-name">PC</span>
+                </a>
+            </div>
+            <div class="platform-block">
+                <a href="#">
+                    <span class="platform-icon">&#9650;</span>
+                    <span class="platform-name">XBOX</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

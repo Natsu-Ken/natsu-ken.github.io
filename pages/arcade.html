@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Resident Evil Archive - Arcade</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body { 
+            background: transparent; 
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+
+        .arcade-page {
+            background-color: #D0D0D0;
+            border: 2px inset #808080;
+            padding: 15px;
+        }
+
+        .arcade-page h1 {
+            font-size: 22px;
+            color: #000000;
+            border-bottom: 2px solid #808080;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+        .arcade-page p {
+            margin-bottom: 10px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .game-list {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
+        }
+
+        .game-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #808080;
+            text-align: center;
+        }
+
+        .game-list li a {
+            color: #0000FF;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .game-list li a:hover {
+            color: #FF0000;
+            text-decoration: underline;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px solid #808080;
+        }
+
+        .back-link a {
+            color: #0000FF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link a:hover {
+            color: #FF0000;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="arcade-page">
+        <h1>🕹️ ARCADE</h1>
+        <p>Игры для платформы Arcade, поддерживаемые RetroAchievements.</p>
+        
+        <ul class="game-list">
+            <li><a href="#">Resident Evil: Arcade</a></li>
+            <li><a href="#">Resident Evil: Gun Survivor</a></li>
+            <li><a href="#">Resident Evil: Dead Aim</a></li>
+        </ul>
+        
+        <div class="back-link">
+            <a href="#" onclick="parent.loadPage('home')">← Вернуться к списку платформ</a>
+        </div>
+    </div>
+
+</body>
+</html>
