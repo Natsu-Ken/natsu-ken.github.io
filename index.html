@@ -1,51 +1,100 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Natsu-Ken</title>
+    <title>Resident Evil Archive</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #111;
-            color: #eee;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
-
-        h1 {
-            font-size: 48px;
-        }
-
-        p {
-            font-size: 20px;
-            line-height: 1.6;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="container">
+<div class="site">
 
-        <h1>Кейт привет)</h1>
+    <!-- HEADER -->
 
-        <p>
-            Тест.
-        </p>
+    <header class="header">
 
-        <p>
-            Для заливки ромов с поддержкой RA.
-        </p>
+        <div class="logo-area">
+            <div class="logo-main">
+                RESIDENT EVIL
+            </div>
 
-    </div>
+            <div class="logo-subtitle">
+                ARCHIVE
+            </div>
+        </div>
+
+        <div class="welcome">
+            WELCOME TO THE RESIDENT EVIL ARCHIVE
+        </div>
+
+    </header>
+
+
+    <!-- INFORMATION -->
+
+    <main>
+
+        <section class="intro">
+
+            <h1>RESIDENT EVIL ARCHIVE</h1>
+
+            <p>
+                An archive of Resident Evil games supported by RetroAchievements.
+            </p>
+
+            <p>
+                Select a platform below to browse the available games.
+            </p>
+
+        </section>
+
+
+        <!-- PLATFORM NAVIGATION -->
+
+        <section class="platforms">
+
+            <a href="ps1/" class="platform">
+                <img src="images/characters/ps1.png" alt="PlayStation">
+                <span>PLAYSTATION</span>
+            </a>
+
+            <a href="ps2/" class="platform">
+                <img src="images/characters/ps2.png" alt="PlayStation 2">
+                <span>PLAYSTATION 2</span>
+            </a>
+
+            <a href="gamecube/" class="platform">
+                <img src="images/characters/gamecube.png" alt="GameCube">
+                <span>GAMECUBE</span>
+            </a>
+
+            <a href="pc/" class="platform">
+                <img src="images/characters/pc.png" alt="PC">
+                <span>PC</span>
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-line"></div>
+
+        <div class="footer-text">
+            RESIDENT EVIL ARCHIVE
+        </div>
+
+    </footer>
+
+</div>
 
 </body>
 </html>
