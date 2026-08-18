@@ -13,9 +13,9 @@
         <div id="header">
             <div class="logo">
                 <span class="logo-main">RESIDENT EVIL</span>
-                <span class="logo-sub">ARCHIVE</span>
+                <span class="logo-sub">АРХИВ</span>
             </div>
-            <div class="tagline">WELCOME TO THE RESIDENT EVIL ARCHIVE</div>
+            <div class="tagline">ДОБРО ПОЖАЛОВАТЬ В АРХИВ RESIDENT EVIL</div>
         </div>
 
         <!-- НАВИГАЦИЯ -->
@@ -33,7 +33,7 @@
 
         <!-- ПОДВАЛ -->
         <div id="footer">
-            &copy; 2026 RESIDENT EVIL ARCHIVE. ВСЕ ПРАВА ЗАЩИЩЕНЫ.
+            &copy; 2026 RESIDENT EVIL ARCHIVE. RETROACHIEVEMENTS.ORG
         </div>
     </div>
 
@@ -42,15 +42,17 @@
             const frame = document.getElementById('content-frame');
             
             if (page === 'home') {
-                frame.src = 'pages/home.html';
-            } else if (page === 'arcade') {      // ← ДОБАВЛЕНО
-                frame.src = 'pages/arcade.html';
-            } else if (page === 'games') {
-                frame.src = 'pages/games.html';
-            } else if (page === 'achievements') {
-                frame.src = 'pages/achievements.html';
-            } else if (page === 'community') {
-                frame.src = 'pages/community.html';
+            frame.src = 'pages/home.html';
+        } else if (page === 'arcade') {
+            frame.src = 'pages/arcade.html';
+        } else if (page === 'gunsur2') {           // ← ПЕРЕИМЕНОВАНО
+            frame.src = 'games/gunsur2.html';      // ← НОВОЕ ИМЯ ФАЙЛА
+        } else if (page === 'games') {
+            frame.src = 'pages/games.html';
+        } else if (page === 'achievements') {
+            frame.src = 'pages/achievements.html';
+        } else if (page === 'community') {
+            frame.src = 'pages/community.html';
             }
         }
     </script>
