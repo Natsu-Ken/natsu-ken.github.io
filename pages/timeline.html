@@ -34,7 +34,7 @@
             margin-bottom: 15px;
         }
 
-         .timeline-wrapper {
+        .timeline-wrapper {
             width: 100%;
             overflow-x: auto;
             -webkit-overflow-scrolling: touch;
@@ -42,20 +42,12 @@
         }
 
         .timeline-wrapper table {
-            min-width: 660px;
             width: 100%;
             border-collapse: collapse;
             background-color: #C8C8C8;
             border: 2px inset #808080;
             font-size: 13px;
-        }
-
-        .timeline-table {
-            width: 100%;
-            border-collapse: collapse;
-            background-color: #C8C8C8;
-            border: 2px inset #808080;
-            font-size: 13px;
+            table-layout: auto;
         }
 
         .timeline-table th {
@@ -77,19 +69,6 @@
             background-color: #D8D8D8;
             font-weight: bold;
             text-align: center;
-        }
-
-        .timeline-table .section-row {
-            background-color: #E0E0E0;
-            font-style: italic;
-        }
-
-        .timeline-table .date-row {
-            background-color: #E8E8E8;
-        }
-
-        .timeline-table .events-row {
-            background-color: #F0F0F0;
         }
 
         .timeline-table tr:hover td {
@@ -114,6 +93,37 @@
             color: #FF0000;
             text-decoration: underline;
         }
+
+        /* === МОБИЛЬНАЯ АДАПТАЦИЯ === */
+        @media (max-width: 768px) {
+            .timeline-wrapper table {
+                font-size: 10px;
+            }
+            .timeline-wrapper th,
+            .timeline-wrapper td {
+                padding: 4px 5px;
+                word-break: break-word;
+            }
+            .timeline-page {
+                padding: 10px;
+            }
+            .timeline-page h1 {
+                font-size: 18px;
+            }
+            .timeline-page p {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .timeline-wrapper table {
+                font-size: 9px;
+            }
+            .timeline-wrapper th,
+            .timeline-wrapper td {
+                padding: 3px 4px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -121,630 +131,631 @@
     <div class="timeline-page">
         <h1>ХРОНОЛОГИЯ</h1>
         <p>Хронология событий основной вселенной Resident Evil.</p>
+
         <div class="timeline-wrapper">
             <table class="timeline-table">
                 <thead>
                     <tr>
-                    <th style="width: 15%;">Релиз</th>
-                    <th style="width: 15%;">Раздел</th>
-                    <th style="width: 15%;">Дата событий</th>
-                    <th style="width: 55%;">События</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- 1967 -->
-                <tr>
-                    <td colspan="4" class="year-row">1967</td>
-                </tr>
-                <tr>
-                    <td>Biohazard Umbrella Chronicles Side A</td>
-                    <td>Foreword</td>
-                    <td>1967</td>
-                    <td>Джеймс Маркус обнаружил способность вируса-прародителя оживлять мёртвые клетки E. coli и поделился своим открытием со скептически настроенным коллегой Эдвардом Эшфордом.</td>
-                </tr>
+                        <th style="width: 15%;">Релиз</th>
+                        <th style="width: 15%;">Раздел</th>
+                        <th style="width: 15%;">Дата событий</th>
+                        <th style="width: 55%;">События</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 1967 -->
+                    <tr>
+                        <td colspan="4" class="year-row">1967</td>
+                    </tr>
+                    <tr>
+                        <td>Biohazard Umbrella Chronicles Side A</td>
+                        <td>Foreword</td>
+                        <td>1967</td>
+                        <td>Джеймс Маркус обнаружил способность вируса-прародителя оживлять мёртвые клетки E. coli и поделился своим открытием со скептически настроенным коллегой Эдвардом Эшфордом.</td>
+                    </tr>
 
-                <!-- 1978 -->
-                <tr>
-                    <td colspan="4" class="year-row">1978</td>
-                </tr>
-                <tr>
-                    <td>Wesker's Report Ⅱ</td>
-                    <td>—</td>
-                    <td>Июль 1978 - <br>Июль 1995</br></td>
-                    <td>Альберт Вескер и Уильям Биркин начинают работу в Арклейской лаборатории за пределами Раккун-Сити.</td>
-                </tr>
+                    <!-- 1978 -->
+                    <tr>
+                        <td colspan="4" class="year-row">1978</td>
+                    </tr>
+                    <tr>
+                        <td>Wesker's Report Ⅱ</td>
+                        <td>—</td>
+                        <td>Июль 1978 - <br>Июль 1995</td>
+                        <td>Альберт Вескер и Уильям Биркин начинают работу в Арклейской лаборатории за пределами Раккун-Сити.</td>
+                    </tr>
 
-                <!-- 1990 -->
-                <tr>
-                    <td colspan="4" class="year-row">1990</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil Requiem</td>
-                    <td>—</td>
-                    <td>Февраль 1990</td>
-                    <td>Хлоя, первый из субъектов Серии 70, стала свидетельницей резни в приюте Раккун-Сити, учинённой детьми Серии 60.</td>
-                </tr>
+                    <!-- 1990 -->
+                    <tr>
+                        <td colspan="4" class="year-row">1990</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil Requiem</td>
+                        <td>—</td>
+                        <td>Февраль 1990</td>
+                        <td>Хлоя, первый из субъектов Серии 70, стала свидетельницей резни в приюте Раккун-Сити, учинённой детьми Серии 60.</td>
+                    </tr>
 
-                <!-- 1998 -->
-                <tr>
-                    <td colspan="4" class="year-row">1998</td>
-                </tr>
-                <tr>
-                    <td>Biohazard Umbrella Chronicles Side A</td>
-                    <td>The Ecliptic Express Incident 1</td>
-                    <td>23–24 Июля</td>
-                    <td>Молодая пара погибает после того, как их машина ломается на отдалённой дороге в Раккунском лесу.</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil 0</td>
-                    <td>Rebecca & Billy</td>
-                    <td>23–24 Июля</td>
-                    <td rowspan="2">Инцидент на экспрессе «Эклиптика».</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil: The Umbrella Chronicles</td>
-                    <td>Beginnings</td>
-                    <td>23–24 Июля</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil: The Umbrella Chronicles</td>
-                    <td>Nightmare 1 Nightmare 2</td>
-                    <td>24 Июля</td>
-                    <td rowspan="3">Инцидент в особняке.</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil</td>
-                    <td>Chris & Jill</td>
-                    <td>24–25 Июля</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil: The Umbrella Chronicles</td>
-                    <td>Rebirth</td>
-                    <td>24 Июля</td>
-                </tr>
-                <tr>
-                    <td rowspan="5">Resident Evil Outbreak</td>
-                    <td>Opening</td>
-                    <td>23 Сентября</td>
-                    <td rowspan="17">Эпидемия в Раккун-Сити.</td>
-                </tr>
-                <tr>
-                    <td>Outbreak</td>
-                    <td rowspan="2">23–24 Сентября</td>
-                </tr>
-                <tr>
-                    <td>Hellfire</td>
-                </tr>
-                <tr>
-                    <td>The Hive</td>
-                    <td rowspan="2">26–30 Сентября</td>
-                </tr>
-                <tr>
-                    <td>Below Freezing Point</td>
-                </tr>
-                <tr>
-                    <td rowspan="4">Resident Evil Outbreak File #2</td>
-                    <td>Wild Things</td>
-                    <td>24 Сентября</td>
-                </tr>
-                <tr>
-                    <td>Underbelly</td>
-                    <td rowspan="2">24–30 Сентября</td>
-                </tr>
-                <tr>
-                    <td>Flashback</td>
-                </tr>
-                <tr>
-                    <td>Desperate Times</td>
-                    <td>27 Сентября</td>
-                </tr>
-                <tr>
-                    <td rowspan="2">Resident Evil 3: Nemesis</td>
-                    <td>Opening</td>
-                    <td>23–27 Сентября</td>
-                </tr>
-                <tr>
-                    <td>First half</td>
-                    <td>28 Сентября</td>
-                </tr>
-                <tr>
-                    <td rowspan="2">Resident Evil 2</td>
-                    <td>Leon & Claire</td>
-                    <td>29–30 Сентября</td>
-                </tr>
-                <tr>
-                    <td>The 4th Survivor</td>
-                    <td>30 Сентября</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil 3: Nemesis</td>
-                    <td>Second half</td>
-                    <td rowspan="4">1 Октября</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil Outbreak</td>
-                    <td>Decisions, Decisions</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil Outbreak File #2</td>
-                    <td>End of the Road</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil: The Umbrella Chronicles</td>
-                    <td>Death's Door</td>
-                </tr>
-                <tr>
-                    <td rowspan="2">Resident Evil Survivor</td>
-                    <td>Vicent and Lott's Diaries</td>
-                    <td>22–24 Ноября</td>
-                    <td rowspan="2">Инцидент на острове Шина.</td>
-                </tr>
-                <tr>
-                    <td>Main Story</td>
-                    <td>24–25 Ноября</td>
-                </tr>
-                <tr>
-                    <td rowspan="3">Resident Evil CODE:Veronica</td>
-                    <td>Claire & Steve</td>
-                    <td rowspan="3">27–28 Декабря</td>
-                    <td>Инцидент на острове Рокфорт.</td>
-                </tr>
-                <tr>
-                    <td>Chris</td>
-                    <td rowspan="2">Эпидемия на антарктической базе.</td>
-                </tr>
-                <tr>
-                    <td>Claire</td>
-                </tr>
+                    <!-- 1998 -->
+                    <tr>
+                        <td colspan="4" class="year-row">1998</td>
+                    </tr>
+                    <tr>
+                        <td>Biohazard Umbrella Chronicles Side A</td>
+                        <td>The Ecliptic Express Incident 1</td>
+                        <td>23–24 Июля</td>
+                        <td>Молодая пара погибает после того, как их машина ломается на отдалённой дороге в Раккунском лесу.</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil 0</td>
+                        <td>Rebecca & Billy</td>
+                        <td>23–24 Июля</td>
+                        <td rowspan="2">Инцидент на экспрессе «Эклиптика».</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil: The Umbrella Chronicles</td>
+                        <td>Beginnings</td>
+                        <td>23–24 Июля</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil: The Umbrella Chronicles</td>
+                        <td>Nightmare 1 Nightmare 2</td>
+                        <td>24 Июля</td>
+                        <td rowspan="3">Инцидент в особняке.</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil</td>
+                        <td>Chris & Jill</td>
+                        <td>24–25 Июля</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil: The Umbrella Chronicles</td>
+                        <td>Rebirth</td>
+                        <td>24 Июля</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="5">Resident Evil Outbreak</td>
+                        <td>Opening</td>
+                        <td>23 Сентября</td>
+                        <td rowspan="17">Эпидемия в Раккун-Сити.</td>
+                    </tr>
+                    <tr>
+                        <td>Outbreak</td>
+                        <td rowspan="2">23–24 Сентября</td>
+                    </tr>
+                    <tr>
+                        <td>Hellfire</td>
+                    </tr>
+                    <tr>
+                        <td>The Hive</td>
+                        <td rowspan="2">26–30 Сентября</td>
+                    </tr>
+                    <tr>
+                        <td>Below Freezing Point</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">Resident Evil Outbreak File #2</td>
+                        <td>Wild Things</td>
+                        <td>24 Сентября</td>
+                    </tr>
+                    <tr>
+                        <td>Underbelly</td>
+                        <td rowspan="2">24–30 Сентября</td>
+                    </tr>
+                    <tr>
+                        <td>Flashback</td>
+                    </tr>
+                    <tr>
+                        <td>Desperate Times</td>
+                        <td>27 Сентября</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Resident Evil 3: Nemesis</td>
+                        <td>Opening</td>
+                        <td>23–27 Сентября</td>
+                    </tr>
+                    <tr>
+                        <td>First half</td>
+                        <td>28 Сентября</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Resident Evil 2</td>
+                        <td>Leon & Claire</td>
+                        <td>29–30 Сентября</td>
+                    </tr>
+                    <tr>
+                        <td>The 4th Survivor</td>
+                        <td>30 Сентября</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil 3: Nemesis</td>
+                        <td>Second half</td>
+                        <td rowspan="4">1 Октября</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil Outbreak</td>
+                        <td>Decisions, Decisions</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil Outbreak File #2</td>
+                        <td>End of the Road</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil: The Umbrella Chronicles</td>
+                        <td>Death's Door</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Resident Evil Survivor</td>
+                        <td>Vicent and Lott's Diaries</td>
+                        <td>22–24 Ноября</td>
+                        <td rowspan="2">Инцидент на острове Шина.</td>
+                    </tr>
+                    <tr>
+                        <td>Main Story</td>
+                        <td>24–25 Ноября</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">Resident Evil CODE:Veronica</td>
+                        <td>Claire & Steve</td>
+                        <td rowspan="3">27–28 Декабря</td>
+                        <td>Инцидент на острове Рокфорт.</td>
+                    </tr>
+                    <tr>
+                        <td>Chris</td>
+                        <td rowspan="2">Эпидемия на антарктической базе.</td>
+                    </tr>
+                    <tr>
+                        <td>Claire</td>
+                    </tr>
 
-                <!-- 2000 -->
-                <tr>
-                    <td colspan="4" class="year-row">2000</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil: Infinite Darkness</td>
-                    <td>Episode 1 and 2 (flashbacks only)</td>
-                    <td>Октябрь</td>
-                    <td>Гражданская война в Пенамстане.</td>
-                </tr>
+                    <!-- 2000 -->
+                    <tr>
+                        <td colspan="4" class="year-row">2000</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil: Infinite Darkness</td>
+                        <td>Episode 1 and 2 (flashbacks only)</td>
+                        <td>Октябрь</td>
+                        <td>Гражданская война в Пенамстане.</td>
+                    </tr>
 
-                <!-- 2002 -->
-                <tr>
-                    <td colspan="4" class="year-row">2002</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil: The Darkside Chronicles</td>
-                    <td>Operation Javier</td>
-                    <td>Лето</td>
-                    <td>Инцидент в Южной Америке.</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil: Degeneration</td>
-                    <td>Film (flashback only)</td>
-                    <td>2002</td>
-                    <td>Биотеррористическая атака в Индии.</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil: Dead Aim</td>
-                    <td>Main game</td>
-                    <td>Сентябрь</td>
-                    <td>Эпидемия на Spencer Rain / Atlantic Facility.</td>
-                </tr>
+                    <!-- 2002 -->
+                    <tr>
+                        <td colspan="4" class="year-row">2002</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil: The Darkside Chronicles</td>
+                        <td>Operation Javier</td>
+                        <td>Лето</td>
+                        <td>Инцидент в Южной Америке.</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil: Degeneration</td>
+                        <td>Film (flashback only)</td>
+                        <td>2002</td>
+                        <td>Биотеррористическая атака в Индии.</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil: Dead Aim</td>
+                        <td>Main game</td>
+                        <td>Сентябрь</td>
+                        <td>Эпидемия на Spencer Rain / Atlantic Facility.</td>
+                    </tr>
 
-                <!-- 2003 -->
-                <tr>
-                    <td colspan="4" class="year-row">2003</td>
-                </tr>
-                <tr>
-                    <td>Biohazard Umbrella Chronicles Side B</td>
-                    <td>Umbrella's End 1</td>
-                    <td rowspan="4">Февраль</td>
-                    <td rowspan="5">Инцидент на Кавказе.</td>
-                </tr>
-                <tr>
-                    <td>Biohazard Umbrella Chronicles: Prelude To The Fall</td>
-                    <td>Prelude to the Fall 1<br>Prelude to the Fall 2</br></td>
-                </tr>
-                <tr>
-                    <td>Biohazard Umbrella Chronicles Side B</td>
-                    <td>Umbrella's End 2</td>
-                </tr>
-                <tr>
-                    <td>Wesker's Extra Report</td>
-                    <td>—</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil: The Umbrella Chronicles</td>
-                    <td>Umbrella's End<br>Dark Legacy</br></td>
-                    <td>18 Февраля</td>
-                </tr>
-                <tr>
-                    <td>Biohazard 4 Incubate</td>
-                    <td>—</td>
-                    <td>2003–2004</td>
-                    <td>Родриго ведёт дневник о жизни в Вальделобосе. После праздника урожая незнакомец убеждает местного священника присоединиться к Los Illuminados. Жители деревни превращаются в Ganado.</td>
-                </tr>
+                    <!-- 2003 -->
+                    <tr>
+                        <td colspan="4" class="year-row">2003</td>
+                    </tr>
+                    <tr>
+                        <td>Biohazard Umbrella Chronicles Side B</td>
+                        <td>Umbrella's End 1</td>
+                        <td rowspan="4">Февраль</td>
+                        <td rowspan="5">Инцидент на Кавказе.</td>
+                    </tr>
+                    <tr>
+                        <td>Biohazard Umbrella Chronicles: Prelude To The Fall</td>
+                        <td>Prelude to the Fall 1<br>Prelude to the Fall 2</td>
+                    </tr>
+                    <tr>
+                        <td>Biohazard Umbrella Chronicles Side B</td>
+                        <td>Umbrella's End 2</td>
+                    </tr>
+                    <tr>
+                        <td>Wesker's Extra Report</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil: The Umbrella Chronicles</td>
+                        <td>Umbrella's End<br>Dark Legacy</td>
+                        <td>18 Февраля</td>
+                    </tr>
+                    <tr>
+                        <td>Biohazard 4 Incubate</td>
+                        <td>—</td>
+                        <td>2003–2004</td>
+                        <td>Родриго ведёт дневник о жизни в Вальделобосе. После праздника урожая незнакомец убеждает местного священника присоединиться к Los Illuminados. Жители деревни превращаются в Ganado.</td>
+                    </tr>
 
-                <!-- 2004 -->
-                <tr>
-                    <td colspan="4" class="year-row">2004</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil: Revelations</td>
-                    <td>Episode 3: Ghosts of Veltro</td>
-                    <td>Лето</td>
-                    <td>Паника в Террагригии.</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil 4</td>
-                    <td>Main game<br>Separate Ways</br></td>
-                    <td>Осень</td>
-                    <td>Похищение дочери президента культом "Лос Илюминадос".</td>
-                </tr>
+                    <!-- 2004 -->
+                    <tr>
+                        <td colspan="4" class="year-row">2004</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil: Revelations</td>
+                        <td>Episode 3: Ghosts of Veltro</td>
+                        <td>Лето</td>
+                        <td>Паника в Террагригии.</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil 4</td>
+                        <td>Main game<br>Separate Ways</td>
+                        <td>Осень</td>
+                        <td>Похищение дочери президента культом "Лос Илюминадос".</td>
+                    </tr>
 
-                <!-- 2005 -->
-                <tr>
-                    <td colspan="4" class="year-row">2005</td>
-                </tr>
-                <tr>
-                    <td>Biohazard The Stage</td>
-                    <td>—</td>
-                    <td rowspan="2">2005</td>
-                    <td>Инцидент в Сент-Клауде.</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil: Revelations</td>
-                    <td>Extended Trailer<br>Main game</br>Jessica's Report</td>
-                    <td>Инцидент на Queen Zenobia.</td>
-                </tr>
-                <tr>
-                    <td>Angela's Diary</td>
-                    <td>—</td>
-                    <td>Июль–Ноябрь</td>
-                    <td>TerraSave связывает испытания вакцин WP Corporation со вспышкой t-Virus в Индии. Анджела Миллер пишет письма своей племяннице, пытаясь понять мотивы брата Кёртиса.</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil: Degeneration</td>
-                    <td>—</td>
-                    <td>14 Ноября</td>
-                    <td>Инцидент в Гарвардвилле.</td>
-                </tr>
+                    <!-- 2005 -->
+                    <tr>
+                        <td colspan="4" class="year-row">2005</td>
+                    </tr>
+                    <tr>
+                        <td>Biohazard The Stage</td>
+                        <td>—</td>
+                        <td rowspan="2">2005</td>
+                        <td>Инцидент в Сент-Клауде.</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil: Revelations</td>
+                        <td>Extended Trailer<br>Main game</br>Jessica's Report</td>
+                        <td>Инцидент на Queen Zenobia.</td>
+                    </tr>
+                    <tr>
+                        <td>Angela's Diary</td>
+                        <td>—</td>
+                        <td>Июль–Ноябрь</td>
+                        <td>TerraSave связывает испытания вакцин WP Corporation со вспышкой t-Virus в Индии. Анджела Миллер пишет письма своей племяннице, пытаясь понять мотивы брата Кёртиса.</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil: Degeneration</td>
+                        <td>—</td>
+                        <td>14 Ноября</td>
+                        <td>Инцидент в Гарвардвилле.</td>
+                    </tr>
 
-                <!-- 2006 -->
-                <tr>
-                    <td colspan="4" class="year-row">2006</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil: Infinite Darkness - The Beginning</td>
-                    <td>—</td>
-                    <td rowspan="2">2006</td>
-                    <td>Террористические акты в Питтсбурге.</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil: Infinite Darkness</td>
-                    <td>—</td>
-                    <td>Инциденты в Пенамстане.</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil 5</td>
-                    <td>Lost in Nightmares</td>
-                    <td>Август</td>
-                    <td>Рейд на поместье Спенсера.</td>
-                </tr>
+                    <!-- 2006 -->
+                    <tr>
+                        <td colspan="4" class="year-row">2006</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil: Infinite Darkness - The Beginning</td>
+                        <td>—</td>
+                        <td rowspan="2">2006</td>
+                        <td>Террористические акты в Питтсбурге.</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil: Infinite Darkness</td>
+                        <td>—</td>
+                        <td>Инциденты в Пенамстане.</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil 5</td>
+                        <td>Lost in Nightmares</td>
+                        <td>Август</td>
+                        <td>Рейд на поместье Спенсера.</td>
+                    </tr>
 
-                <!-- 2008 -->
-                <tr>
-                    <td colspan="4" class="year-row">2008</td>
-                </tr>
-                <tr>
-                    <td>Experience Kijuju</td>
-                    <td>—</td>
-                    <td>Декабрь 2008 - Март 2009</td>
-                    <td>Американский шахтёр в автономной зоне Киджуджу ведёт блог о ухудшении обстановки в городе из-за религиозного экстремизма и казней иностранцев.</td>
-                </tr>
+                    <!-- 2008 -->
+                    <tr>
+                        <td colspan="4" class="year-row">2008</td>
+                    </tr>
+                    <tr>
+                        <td>Experience Kijuju</td>
+                        <td>—</td>
+                        <td>Декабрь 2008 - Март 2009</td>
+                        <td>Американский шахтёр в автономной зоне Киджуджу ведёт блог о ухудшении обстановки в городе из-за религиозного экстремизма и казней иностранцев.</td>
+                    </tr>
 
-                <!-- 2009 -->
-                <tr>
-                    <td colspan="4" class="year-row">2009</td>
-                </tr>
-                <tr>
-                    <td>BSAA Remote Desktop</td>
-                    <td>—</td>
-                    <td>Февраль–Март</td>
-                    <td>Разведотдел BSAA обсуждает угрозу биооружия в Киджуджу. Фотография контрабандиста Рикардо Ирвинга подтверждает это.</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil 5</td>
-                    <td>Main game<br>Desperate Escape</br></td>
-                    <td>4–6 Марта</td>
-                    <td>Инцидент в Киджуджу.</td>
-                </tr>
+                    <!-- 2009 -->
+                    <tr>
+                        <td colspan="4" class="year-row">2009</td>
+                    </tr>
+                    <tr>
+                        <td>BSAA Remote Desktop</td>
+                        <td>—</td>
+                        <td>Февраль–Март</td>
+                        <td>Разведотдел BSAA обсуждает угрозу биооружия в Киджуджу. Фотография контрабандиста Рикардо Ирвинга подтверждает это.</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil 5</td>
+                        <td>Main game<br>Desperate Escape</br></td>
+                        <td>4–6 Марта</td>
+                        <td>Инцидент в Киджуджу.</td>
+                    </tr>
 
-                <!-- 2010 -->
-                <tr>
-                    <td colspan="4" class="year-row">2010</td>
-                </tr>
-                <tr>
-                    <td>Biohazard The Stage</td>
-                    <td>—</td>
-                    <td>2010</td>
-                    <td>Инцидент в Философском университете.</td>
-                </tr>
+                    <!-- 2010 -->
+                    <tr>
+                        <td colspan="4" class="year-row">2010</td>
+                    </tr>
+                    <tr>
+                        <td>Biohazard The Stage</td>
+                        <td>—</td>
+                        <td>2010</td>
+                        <td>Инцидент в Философском университете.</td>
+                    </tr>
 
-                <!-- 2011 -->
-                <tr>
-                    <td colspan="4" class="year-row">2011</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil: Revelations 2</td>
-                    <td>Main game:<br>Claire episodes</br>Penal Colony<br>Contemplation</br>Judgment<br>Metamorphosis</br>Extra Episode: The Struggle</td>
-                    <td rowspan="4">Январь–Февраль</td>
-                    <td>Инцидент на острове Сейн.</td>
-                </tr>
-                <tr>
-                    <td>Las Plagas: Organisms of War</td>
-                    <td>—</td>
-                    <td rowspan="3">Гражданская война в Восточно-Славянской республике.</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil: Damnation</td>
-                    <td>—</td>
-                </tr>
-                <tr>
-                    <td>Biohazard Damnation (novel)</td>
-                    <td>—</td>
-                </tr>                
-                <tr>
-                    <td>Resident Evil: Revelations 2</td>
-                    <td>Extra Episode: The Struggle<br>Extra Episode: Little Miss</br>Main game:<br>Barry episodes</br>Penal Colony<br>Contemplation</br>Judgment<br>Metamorphosis</br></td>
-                    <td>Июль–Август</td>
-                    <td>Инцидент на острове Сейн.</td>
-                </tr>
+                    <!-- 2011 -->
+                    <tr>
+                        <td colspan="4" class="year-row">2011</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil: Revelations 2</td>
+                        <td>Main game:<br>Claire episodes</br>Penal Colony<br>Contemplation</br>Judgment<br>Metamorphosis</br>Extra Episode: The Struggle</td>
+                        <td rowspan="4">Январь–Февраль</td>
+                        <td>Инцидент на острове Сейн.</td>
+                    </tr>
+                    <tr>
+                        <td>Las Plagas: Organisms of War</td>
+                        <td>—</td>
+                        <td rowspan="3">Гражданская война в Восточно-Славянской республике.</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil: Damnation</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>Biohazard Damnation (novel)</td>
+                        <td>—</td>
+                    </tr>                
+                    <tr>
+                        <td>Resident Evil: Revelations 2</td>
+                        <td>Extra Episode: The Struggle<br>Extra Episode: Little Miss</br>Main game:<br>Barry episodes</br>Penal Colony<br>Contemplation</br>Judgment<br>Metamorphosis</br></td>
+                        <td>Июль–Август</td>
+                        <td>Инцидент на острове Сейн.</td>
+                    </tr>
 
-                <!-- 2012 -->
-                <tr>
-                    <td colspan="4" class="year-row">2012</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil: The Marhawa Desire</td>
-                    <td>—</td>
-                    <td>2012</td>
-                    <td>Биотеррористическая атака на Cobra Mart.<br>Инцидент в школе Мархава.</br></td>
-                </tr>
-                <tr>
-                    <td>Resident Evil: Umbrella Corps</td>
-                    <td>The Experiment: Missions 1-23</td>
-                    <td>12 Марта -<br>20 Ноября</br></td>
-                    <td>Авраам Джексон отправляет своего подчинённого, 3A7, в различные места, чтобы тот выполнял его поручения.</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil 6</td>
-                    <td>Chris Story:<br>Chapter 2</br>Jake Story:<br>Chapter 1 & 2</br></td>
-                    <td>24–25 Декабря</td>
-                    <td>Гражданская война в Эдонии.</td>
-                </tr>
+                    <!-- 2012 -->
+                    <tr>
+                        <td colspan="4" class="year-row">2012</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil: The Marhawa Desire</td>
+                        <td>—</td>
+                        <td>2012</td>
+                        <td>Биотеррористическая атака на Cobra Mart.<br>Инцидент в школе Мархава.</br></td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil: Umbrella Corps</td>
+                        <td>The Experiment: Missions 1-23</td>
+                        <td>12 Марта -<br>20 Ноября</br></td>
+                        <td>Авраам Джексон отправляет своего подчинённого, 3A7, в различные места, чтобы тот выполнял его поручения.</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil 6</td>
+                        <td>Chris Story:<br>Chapter 2</br>Jake Story:<br>Chapter 1 & 2</br></td>
+                        <td>24–25 Декабря</td>
+                        <td>Гражданская война в Эдонии.</td>
+                    </tr>
 
-                <!-- 2013 -->
-                <tr>
-                    <td colspan="4" class="year-row">2013</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil: Umbrella Corps</td>
-                    <td>The Experiment: Endless Game</td>
-                    <td>2 Января</td>
-                    <td>Авраам Джексон отправляет своего подчинённого, 3A7, в различные места, чтобы тот выполнял его поручения.</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil 6</td>
-                    <td>Ada Story:<br>Chapter 1</br></td>
-                    <td>27 Июня</td>
-                    <td>—</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil 6</td>
-                    <td>Fallen Hero</td>
-                    <td rowspan="3">29 Июня</td>
-                    <td>—</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil: Revelations 2</td>
-                    <td>Epilogue (Two Years Later)</td>
-                    <td>—</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil 6</td>
-                    <td>Leon Story:<br>Chapter 1 & 2</br>Ada Story:<br>Chapter 2</br>Leon Story:<br>Chapter 3</br></td>
-                    <td>Биотеррористический инцидент в Толл-Оукс.</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil 6</td>
-                    <td>Chris Story:<br>Chapter 1</br></td>
-                    <td rowspan="3">29 Июня — 1 Июля</td>
-                    <td rowspan="3">Биотеррористический инцидент в Ланьсяне.</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil: The Marhawa Desire</td>
-                    <td>Part 39: Encroaching Darkness<br>epilogue</br></td>
-                </tr>
-                <tr>
-                    <td>Resident Evil 6</td>
-                    <td>Jake Story:<br>Chapter 3</br>Ada Story:<br>Chapter 3</br>Jake Story:<br>Chapter 4</br>Chris Story:<br>Chapter 3</br>Ada Story:<br>Chapter 4</br>Chris Story:<br>Chapter 4</br>Leon Story:<br>Chapter 4</br>Ada Story:<br>Chapter 5</br>Leon Story:<br>Chapter 5</br>Jake Story:<br>Chapter 5</br>Chris Story:<br>Chapter 5</br></td>
-                </tr>
+                    <!-- 2013 -->
+                    <tr>
+                        <td colspan="4" class="year-row">2013</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil: Umbrella Corps</td>
+                        <td>The Experiment: Endless Game</td>
+                        <td>2 Января</td>
+                        <td>Авраам Джексон отправляет своего подчинённого, 3A7, в различные места, чтобы тот выполнял его поручения.</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil 6</td>
+                        <td>Ada Story:<br>Chapter 1</br></td>
+                        <td>27 Июня</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil 6</td>
+                        <td>Fallen Hero</td>
+                        <td rowspan="3">29 Июня</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil: Revelations 2</td>
+                        <td>Epilogue (Two Years Later)</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil 6</td>
+                        <td>Leon Story:<br>Chapter 1 & 2</br>Ada Story:<br>Chapter 2</br>Leon Story:<br>Chapter 3</br></td>
+                        <td>Биотеррористический инцидент в Толл-Оукс.</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil 6</td>
+                        <td>Chris Story:<br>Chapter 1</br></td>
+                        <td rowspan="3">29 Июня — 1 Июля</td>
+                        <td rowspan="3">Биотеррористический инцидент в Ланьсяне.</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil: The Marhawa Desire</td>
+                        <td>Part 39: Encroaching Darkness<br>epilogue</br></td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil 6</td>
+                        <td>Jake Story:<br>Chapter 3</br>Ada Story:<br>Chapter 3</br>Jake Story:<br>Chapter 4</br>Chris Story:<br>Chapter 3</br>Ada Story:<br>Chapter 4</br>Chris Story:<br>Chapter 4</br>Leon Story:<br>Chapter 4</br>Ada Story:<br>Chapter 5</br>Leon Story:<br>Chapter 5</br>Jake Story:<br>Chapter 5</br>Chris Story:<br>Chapter 5</br></td>
+                    </tr>
 
-                <!-- 2014 -->
-                <tr>
-                    <td colspan="4" class="year-row">2014</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil: Umbrella Corps</td>
-                    <td>Multiplayer: 4 Survivors</td>
-                    <td rowspan="4">2014</td>
-                    <td>—</td>
-                </tr>
-                <tr>
-                    <td>Biohazard<br>Heavenly Island</br></td>
-                    <td>—</td>
-                    <td>Инцедент на острове Сонидо де Тортуга.<br>Инцидент в пустыне Мохаве.</br></td>
-                </tr>
-                <tr>
-                    <td>Resident Evil: Vendetta</td>
-                    <td>—</td>
-                    <td rowspan="2">Биотеррористический инцидент в Вашингтоне, инцидент в особняке Керетаро, убийства на Великих озёрах, теракт в Александровском институте биотехнологий, биотеррористическая атака в Нью-Йорке.</td>
-                </tr>
-                <tr>
-                    <td>Biohazard<br>Vendetta (novel)</br></td>
-                    <td>—</td>
-                </tr>
-                <tr>
-                    <td rowspan="2">Resident Evil 7: Biohazard</td>
-                    <td>Old Videotape</td>
-                    <td>5 Октября</td>
-                    <td>Крушение Annabelle.</td>
-                </tr>
-                <tr>
-                    <td>Daughters</td>
-                    <td>10 Октября</td>
-                    <td>Инцидент в доме Бейкеров.</td>
-                </tr>
+                    <!-- 2014 -->
+                    <tr>
+                        <td colspan="4" class="year-row">2014</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil: Umbrella Corps</td>
+                        <td>Multiplayer: 4 Survivors</td>
+                        <td rowspan="4">2014</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>Biohazard<br>Heavenly Island</br></td>
+                        <td>—</td>
+                        <td>Инцедент на острове Сонидо де Тортуга.<br>Инцидент в пустыне Мохаве.</br></td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil: Vendetta</td>
+                        <td>—</td>
+                        <td rowspan="2">Биотеррористический инцидент в Вашингтоне, инцидент в особняке Керетаро, убийства на Великих озёрах, теракт в Александровском институте биотехнологий, биотеррористическая атака в Нью-Йорке.</td>
+                    </tr>
+                    <tr>
+                        <td>Biohazard<br>Vendetta (novel)</br></td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Resident Evil 7: Biohazard</td>
+                        <td>Old Videotape</td>
+                        <td>5 Октября</td>
+                        <td>Крушение Annabelle.</td>
+                    </tr>
+                    <tr>
+                        <td>Daughters</td>
+                        <td>10 Октября</td>
+                        <td>Инцидент в доме Бейкеров.</td>
+                    </tr>
 
-                <!-- 2015 -->
-                <tr>
-                    <td colspan="4" class="year-row">2015</td>
-                </tr>
-                <tr>
-                    <td>Biohazard The Experience</td>
-                    <td>—</td>
-                    <td rowspan="4">2015</td>
-                    <td>—</td>
-                </tr>
-                <tr>
-                    <td>Biohazard<br>Death Island</br></td>
-                    <td>—</td>
-                    <td rowspan="2">Серийные убийства в Сан-Франциско.<br>Эпидемия на острове Алькатрас.</br></td>
-                </tr>
-                <tr>
-                    <td>Resident Evil: Death Island</td>
-                    <td>—</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil: Umbrella Corps</td>
-                    <td>Tutorial<br>Multiplayer</br></td>
-                    <td>—</td>
-                </tr>
+                    <!-- 2015 -->
+                    <tr>
+                        <td colspan="4" class="year-row">2015</td>
+                    </tr>
+                    <tr>
+                        <td>Biohazard The Experience</td>
+                        <td>—</td>
+                        <td rowspan="4">2015</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>Biohazard<br>Death Island</br></td>
+                        <td>—</td>
+                        <td rowspan="2">Серийные убийства в Сан-Франциско.<br>Эпидемия на острове Алькатрас.</br></td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil: Death Island</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil: Umbrella Corps</td>
+                        <td>Tutorial<br>Multiplayer</br></td>
+                        <td>—</td>
+                    </tr>
 
-                <!-- 2016 -->
-                <tr>
-                    <td colspan="4" class="year-row">2016</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil: Umbrella Corps</td>
-                    <td>Multiplayer:<br>One-Life Match, Multi-Mission</br></td>
-                    <td>2016</td>
-                    <td>—</td>
-                </tr>
+                    <!-- 2016 -->
+                    <tr>
+                        <td colspan="4" class="year-row">2016</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil: Umbrella Corps</td>
+                        <td>Multiplayer:<br>One-Life Match, Multi-Mission</br></td>
+                        <td>2016</td>
+                        <td>—</td>
+                    </tr>
 
-                <!-- 2017 -->
-                <tr>
-                    <td colspan="4" class="year-row">2017</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil 7: Biohazard</td>
-                    <td>"Derelict House Footage"</td>
-                    <td>1 Июня</td>
-                    <td rowspan="6">Инцидент в доме Бейкеров.</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil 7: Biohazard</td>
-                    <td>"Happy Birthday"</td>
-                    <td>2 Июня</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil 7: Beginning Hour</td>
-                    <td>—</td>
-                    <td>Июль</td>
-                </tr>
-                <tr>
-                    <td rowspan="3">Resident Evil 7: Biohazard</td>
-                    <td>Main Story</td>
-                    <td>19–20 Июля</td>
-                </tr>
-                <tr>
-                    <td>Not A Hero</td>
-                    <td>20 Июля</td>
-                </tr>
-                <tr>
-                    <td>End of Zoe</td>
-                    <td>Июль–Август</td>
-                </tr>
+                    <!-- 2017 -->
+                    <tr>
+                        <td colspan="4" class="year-row">2017</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil 7: Biohazard</td>
+                        <td>"Derelict House Footage"</td>
+                        <td>1 Июня</td>
+                        <td rowspan="6">Инцидент в доме Бейкеров.</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil 7: Biohazard</td>
+                        <td>"Happy Birthday"</td>
+                        <td>2 Июня</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil 7: Beginning Hour</td>
+                        <td>—</td>
+                        <td>Июль</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">Resident Evil 7: Biohazard</td>
+                        <td>Main Story</td>
+                        <td>19–20 Июля</td>
+                    </tr>
+                    <tr>
+                        <td>Not A Hero</td>
+                        <td>20 Июля</td>
+                    </tr>
+                    <tr>
+                        <td>End of Zoe</td>
+                        <td>Июль–Август</td>
+                    </tr>
 
-                <!-- 2018 -->
-                <tr>
-                    <td colspan="4" class="year-row">2018</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil: Requiem</td>
-                    <td>Main Game</td>
-                    <td>19 Октября</td>
-                    <td>Дело в отеле Wrenwood.</td>
-                </tr>
+                    <!-- 2018 -->
+                    <tr>
+                        <td colspan="4" class="year-row">2018</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil: Requiem</td>
+                        <td>Main Game</td>
+                        <td>19 Октября</td>
+                        <td>Дело в отеле Wrenwood.</td>
+                    </tr>
 
-                <!-- 2020 -->
-                <tr>
-                    <td colspan="4" class="year-row">2020</td>
-                </tr>
-                <tr>
-                    <td>Remembering Resident Evil 7</td>
-                    <td>Main Story</td>
-                    <td>2020</td>
-                    <td>Интервью с Итаном Уинтерсом.</td>
-                </tr>
+                    <!-- 2020 -->
+                    <tr>
+                        <td colspan="4" class="year-row">2020</td>
+                    </tr>
+                    <tr>
+                        <td>Remembering Resident Evil 7</td>
+                        <td>Main Story</td>
+                        <td>2020</td>
+                        <td>Интервью с Итаном Уинтерсом.</td>
+                    </tr>
 
-                <!-- 2021 -->
-                <tr>
-                    <td colspan="4" class="year-row">2021</td>
-                </tr>
-                <tr>
-                    <td>The Baker Incident Report</td>
-                    <td>The Baker Incident Report<br>Discovery of the Incident</br>The Cover-up<br>The Hidden Truth</br>Where the Winterses Are<br>Letters (from Mia; from HQ to Chris Redfield)</br></td>
-                    <td>2021</td>
-                    <td>Зои Бейкер собирает коллаж о событиях в поместье Бейкеров и их последствиях, включая причастность "The Connections", исчезновение Итана и Мии Уинтерс и дезертирство Криса из BSAA.</td>
-                </tr>
-                <tr>
-                    <td>Maiden Demo</td>
-                    <td>—</td>
-                    <td>Неизвестно</td>
-                    <td>—</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil Village</td>
-                    <td>Main game</td>
-                    <td>8–10 Февраля</td>
-                    <td>Инцидент в деревне.</td>
-                </tr>
+                    <!-- 2021 -->
+                    <tr>
+                        <td colspan="4" class="year-row">2021</td>
+                    </tr>
+                    <tr>
+                        <td>The Baker Incident Report</td>
+                        <td>The Baker Incident Report<br>Discovery of the Incident</br>The Cover-up<br>The Hidden Truth</br>Where the Winterses Are<br>Letters (from Mia; from HQ to Chris Redfield)</br></td>
+                        <td>2021</td>
+                        <td>Зои Бейкер собирает коллаж о событиях в поместье Бейкеров и их последствиях, включая причастность "The Connections", исчезновение Итана и Мии Уинтерс и дезертирство Криса из BSAA.</td>
+                    </tr>
+                    <tr>
+                        <td>Maiden Demo</td>
+                        <td>—</td>
+                        <td>Неизвестно</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil Village</td>
+                        <td>Main game</td>
+                        <td>8–10 Февраля</td>
+                        <td>Инцидент в деревне.</td>
+                    </tr>
 
-                <!-- 2026 -->
-                <tr>
-                    <td colspan="4" class="year-row">2026</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil Requiem</td>
-                    <td>Main Game</td>
-                    <td>8–9 Октября</td>
-                    <td>Вспышка эпидемии в городе Ренвуд.<br>Вспышка в медицинском центре для хронических больных Роудс-Хилл.</br>Поиски Элписа.</td>
-                </tr>
+                    <!-- 2026 -->
+                    <tr>
+                        <td colspan="4" class="year-row">2026</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil Requiem</td>
+                        <td>Main Game</td>
+                        <td>8–9 Октября</td>
+                        <td>Вспышка эпидемии в городе Ренвуд.<br>Вспышка в медицинском центре для хронических больных Роудс-Хилл.</br>Поиски Элписа.</td>
+                    </tr>
 
-                <!-- 2037 -->
-                <tr>
-                    <td colspan="4" class="year-row">2037</td>
-                </tr>
-                <tr>
-                    <td>Resident Evil Village</td>
-                    <td>Shadows of Rose<br>Epilogue cutscene</br></td>
-                    <td>2037</td>
-                    <td>Остаток сознания Миранды внутри грибного корня обретает силу и пытается заманить Роуз Уинтерс в своё сознание. Роуз ищет кристалл, чтобы избавиться от плесени. В конце Роуз посещает могилу отца.</td>
-                </tr>
-            </tbody>
-        </table>
+                    <!-- 2037 -->
+                    <tr>
+                        <td colspan="4" class="year-row">2037</td>
+                    </tr>
+                    <tr>
+                        <td>Resident Evil Village</td>
+                        <td>Shadows of Rose<br>Epilogue cutscene</br></td>
+                        <td>2037</td>
+                        <td>Остаток сознания Миранды внутри грибного корня обретает силу и пытается заманить Роуз Уинтерс в своё сознание. Роуз ищет кристалл, чтобы избавиться от плесени. В конце Роуз посещает могилу отца.</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
         <div class="back-link">
