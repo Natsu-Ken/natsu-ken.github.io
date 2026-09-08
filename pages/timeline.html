@@ -34,6 +34,22 @@
             margin-bottom: 15px;
         }
 
+         .timeline-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 10px 0;
+        }
+
+        .timeline-wrapper table {
+            min-width: 660px;
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #C8C8C8;
+            border: 2px inset #808080;
+            font-size: 13px;
+        }
+
         .timeline-table {
             width: 100%;
             border-collapse: collapse;
@@ -105,10 +121,10 @@
     <div class="timeline-page">
         <h1>ХРОНОЛОГИЯ</h1>
         <p>Хронология событий основной вселенной Resident Evil.</p>
-
-        <table class="timeline-table">
-            <thead>
-                <tr>
+        <div class="timeline-wrapper">
+            <table class="timeline-table">
+                <thead>
+                    <tr>
                     <th style="width: 15%;">Релиз</th>
                     <th style="width: 15%;">Раздел</th>
                     <th style="width: 15%;">Дата событий</th>
@@ -729,6 +745,7 @@
                 </tr>
             </tbody>
         </table>
+        </div>
 
         <div class="back-link">
             <a href="#" onclick="parent.loadPage('home')">← Вернуться на главную</a>
