@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Resident Evil Archive - Главная</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body { 
+            background: transparent; 
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+        
+        #main {
+            background-color: #D0D0D0;
+            border: 2px inset #808080;
+            padding: 12px 15px 15px 15px;
+            margin-bottom: 0;
+        }
+
+        #main h1 {
+            font-size: 22px;
+            color: #000000;
+            border-bottom: 2px solid #808080;
+            padding-bottom: 5px;
+            margin-bottom: 8px;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+        #main p {
+            margin-bottom: 6px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        #platforms {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 20px;
+            padding: 8px 10px;
+            background-color: #C0C0C0;
+            border: 2px outset #FFFFFF;
+        }
+
+        .platform-block {
+            flex: 0 1 160px;
+            min-height: 115px;
+            background-color: #CCCCCC;
+            border: 3px outset #FFFFFF;
+            text-align: center;
+            transition: all 0.15s ease;
+        }
+
+        .platform-block:hover {
+            border: 3px inset #FFFFFF;
+            background-color: #BBBBBB;
+        }
+
+        .platform-block a {
+            display: block;
+            padding: 15px 5px;
+            color: #0000FF;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        .platform-block a:visited {
+            color: #800080;
+        }
+
+        .platform-icon {
+            display: block;
+            width: 54px;
+            height: 72px;
+            margin: 0 auto 4px auto;
+        }
+
+        .platform-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            image-rendering: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="main">
+        <h1>WELCOME!</h1>
+        <p>Архив игр серии Resident Evil, поддерживаемых сайтом RetroAchievements.</p>
+        <p>Выберите платформу ниже, чтобы просмотреть доступные игры.</p>
+
+        <!-- БЛОК С ПЛАТФОРМАМИ (15 штук, 3 ряда по 5) -->
+        <div id="platforms">
+            
+            <!-- РЯД 1 -->
+            <div class="platform-block">
+                <a href="#" onclick="parent.loadPage(event, 'arcade')">
+                    <span class="platform-icon">
+                        <img src="../images/icons/arc.png" alt="Arcade">
+                    </span>
+                    <span class="platform-name">ARCADE</span>
+                </a>
+            </div>
+            <div class="platform-block">
+                <a href="#" onclick="parent.loadPage(event, 'dreamcast')">
+                    <span class="platform-icon">
+                        <img src="../images/icons/dc.png" alt="Dreamcast">
+                    </span>
+                    <span class="platform-name">DREAMCAST</span>
+                </a>
+            </div>
+            <div class="platform-block">
+                <a href="#" onclick="parent.loadPage(event, 'nds')">
+                    <span class="platform-icon">
+                        <img src="../images/icons/ds.png" alt="Nintendo DS">
+                    </span>
+                    <span class="platform-name">NINTENDO DS</span>
+                </a>
+            </div>
+            <div class="platform-block">
+                <a href="#" onclick="parent.loadPage(event, 'gameboy')">
+                    <span class="platform-icon">
+                        <img src="../images/icons/gb.png" alt="Game Boy">
+                    </span>
+                    <span class="platform-name">GAME BOY</span>
+                </a>
+            </div>
+            <div class="platform-block">
+                <a href="#" onclick="parent.loadPage(event, 'gbc')">
+                    <span class="platform-icon">
+                        <img src="../images/icons/gbc.png" alt="Game Boy Color">
+                    </span>
+                    <span class="platform-name">GAME BOY COLOR</span>
+                </a>
+            </div>
+
+            <!-- РЯД 2 -->
+            <div class="platform-block">
+                <a href="#" onclick="parent.loadPage(event, 'gba')">
+                    <span class="platform-icon">
+                        <img src="../images/icons/gba.png" alt="Game Boy Advance">
+                    </span>
+                    <span class="platform-name">GAME BOY ADVANCE</span>
+                </a>
+            </div>
+            <div class="platform-block">
+                <a href="#" onclick="parent.loadPage(event, 'gamecube')">
+                    <span class="platform-icon">
+                        <img src="../images/icons/gc.png" alt="GameCube">
+                    </span>
+                    <span class="platform-name">GAMECUBE</span>
+                </a>
+            </div>
+            <div class="platform-block">
+                <a href="#" onclick="parent.loadPage(event, 'n64')">
+                    <span class="platform-icon">
+                        <img src="../images/icons/n64.png" alt="Nintendo 64">
+                    </span>
+                    <span class="platform-name">NINTENDO 64</span>
+                </a>
+            </div>
+            <div class="platform-block">
+                <a href="#" onclick="parent.loadPage(event, 'nes')">
+                    <span class="platform-icon">
+                        <img src="../images/icons/nes.png" alt="NES/Famicom">
+                    </span>
+                    <span class="platform-name">NES/FAMICOM</span>
+                </a>
+            </div>
+            <div class="platform-block">
+                <a href="#" onclick="parent.loadPage(event, 'playstation')">
+                    <span class="platform-icon">
+                        <img src="../images/icons/ps1.png" alt="PlayStation">
+                    </span>
+                    <span class="platform-name">PLAYSTATION</span>
+                </a>
+            </div>
+
+            <!-- РЯД 3 -->
+            <div class="platform-block">
+                <a href="#" onclick="parent.loadPage(event, 'playstation2')">
+                    <span class="platform-icon">
+                        <img src="../images/icons/ps2.png" alt="PlayStation 2">
+                    </span>
+                    <span class="platform-name">PLAYSTATION 2</span>
+                </a>
+            </div>
+            <div class="platform-block">
+                <a href="#" onclick="parent.loadPage(event, 'saturn')">
+                    <span class="platform-icon">
+                        <img src="../images/icons/sat.png" alt="Saturn">
+                    </span>
+                    <span class="platform-name">SATURN</span>
+                </a>
+            </div>
+            <div class="platform-block">
+                <a href="#" onclick="parent.loadPage(event, 'wii')">
+                    <span class="platform-icon">
+                        <img src="../images/icons/wii.png" alt="Wii">
+                    </span>
+                    <span class="platform-name">WII</span>
+                </a>
+            </div>
+            <div class="platform-block">
+                <a href="#" onclick="parent.loadPage(event, 'ps3')">
+                    <span class="platform-icon">
+                        <img src="../images/icons/ps3.png" alt="PlayStation 3">
+                    </span>
+                    <span class="platform-name">PLAYSTATION 3</span>
+                </a>
+            </div>
+            <div class="platform-block">
+                <a href="#" onclick="parent.loadPage(event, 'zeebo')">
+                    <span class="platform-icon">
+                        <img src="../images/icons/zeebo.png" alt="Zeebo">
+                    </span>
+                    <span class="platform-name">ZEEBO</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
