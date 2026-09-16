@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Resident Evil Archive - Главная</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body { 
+            background: transparent; 
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+        
+        #main {
+            background-color: #D0D0D0;
+            border: 2px inset #808080;
+            padding: 12px 15px 15px 15px;
+            margin-bottom: 0;
+        }
+
+        #main h1 {
+            font-size: 22px;
+            color: #000000;
+            border-bottom: 2px solid #808080;
+            padding-bottom: 5px;
+            margin-bottom: 8px;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+        #main p {
+            margin-bottom: 6px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        #platforms {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 20px;
+            padding: 8px 10px;
+            background-color: #C0C0C0;
+            border: 2px outset #FFFFFF;
+        }
+
+        .platform-block {
+            flex: 0 1 160px;
+            min-height: 115px;
+            background-color: #CCCCCC;
+            border: 3px outset #FFFFFF;
+            text-align: center;
+            transition: all 0.15s ease;
+        }
+
+        .platform-block:hover {
+            border: 3px inset #FFFFFF;
+            background-color: #BBBBBB;
+        }
+
+        .platform-block a {
+            display: block;
+            padding: 15px 5px;
+            color: #0000FF;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        .platform-block a:visited {
+            color: #800080;
+        }
+
+        .platform-icon {
+            display: block;
+            font-size: 54px;
+            margin-bottom: 4px;
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="main">
+        <h1>WELCOME!</h1>
+        <p>Архив игр серии Resident Evil, поддерживаемых сайтом RetroAchievements.</p>
+        <p>Выберите платформу ниже, чтобы просмотреть доступные игры.</p>
+
+        <div id="platforms">
+            
+            <div class="platform-block">
+                <a href="#" onclick="parent.loadPage('arcade')">
+                    <span class="platform-icon">🕹️</span>
+                    <span class="platform-name">ARCADE</span>
+                </a>
+            </div>
+            <div class="platform-block">
+                <a href="#" onclick="parent.loadPage('dreamcast')">
+                    <span class="platform-icon">🌀</span>
+                    <span class="platform-name">DREAMCAST</span>
+                </a>
+            </div>
+            <div class="platform-block">
+                <a href="#" onclick="parent.loadPage('nds')">
+                    <span class="platform-icon">📱</span>
+                    <span class="platform-name">NINTENDO DS</span>
+                </a>
+            </div>
+            <div class="platform-block">
+                <a href="#" onclick="parent.loadPage('gameboy')">
+                    <span class="platform-icon">📟</span>
+                    <span class="platform-name">GAME BOY</span>
+                </a>
+            </div>
+            <div class="platform-block">
+                <a href="#" onclick="parent.loadPage('gbc')">
+                    <span class="platform-icon">🌈</span>
+                    <span class="platform-name">GAME BOY COLOR</span>
+                </a>
+            </div>
+
+            <div class="platform-block">
+                <a href="#" onclick="parent.loadPage('gba')">
+                    <span class="platform-icon">⬆️</span>
+                    <span class="platform-name">GAME BOY ADVANCE</span>
+                </a>
+            </div>
+            <div class="platform-block">
+                <a href="#" onclick="parent.loadPage('gamecube')">
+                    <span class="platform-icon">🟣</span>
+                    <span class="platform-name">GAMECUBE</span>
+                </a>
+            </div>
+            <div class="platform-block">
+                <a href="#" onclick="parent.loadPage('n64')">
+                    <span class="platform-icon">🔷</span>
+                    <span class="platform-name">NINTENDO 64</span>
+                </a>
+            </div>
+            <div class="platform-block">
+                <a href="#" onclick="parent.loadPage('nes')">
+                    <span class="platform-icon">🔴</span>
+                    <span class="platform-name">NES/FAMICOM</span>
+                </a>
+            </div>
+            <div class="platform-block">
+                <a href="#" onclick="parent.loadPage('playstation')">
+                    <span class="platform-icon">🔵</span>
+                    <span class="platform-name">PLAYSTATION</span>
+                </a>
+            </div>
+
+            <div class="platform-block">
+                <a href="#" onclick="parent.loadPage('playstation2')">
+                    <span class="platform-icon">2️⃣</span>
+                    <span class="platform-name">PLAYSTATION 2</span>
+                </a>
+            </div>
+            <div class="platform-block">
+                <a href="#" onclick="parent.loadPage('saturn')">
+                    <span class="platform-icon">🟠</span>
+                    <span class="platform-name">SATURN</span>
+                </a>
+            </div>
+            <div class="platform-block">
+                <a href="#" onclick="parent.loadPage('wii')">
+                    <span class="platform-icon">⬜</span>
+                    <span class="platform-name">WII</span>
+                </a>
+            </div>
+            <div class="platform-block">
+                <a href="#" onclick="parent.loadPage('ps3')">
+                    <span class="platform-icon">💿</span>
+                    <span class="platform-name">PLAYSTATION 3</span>
+                </a>
+            </div>
+            <div class="platform-block">
+                <a href="#">
+                    <span class="platform-icon">💻</span>
+                    <span class="platform-name">PC</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
