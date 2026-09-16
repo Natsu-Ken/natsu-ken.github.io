@@ -17,10 +17,10 @@
         </div>
 
         <div id="navbar">
-            <a href="#" onclick="loadPage('home')">ГЛАВНАЯ</a> |
-            <a href="#" onclick="loadPage('timeline')">ХРОНОЛОГИЯ</a> |
-            <a href="#" onclick="loadPage('other')">ПРОЧЕЕ</a> |
-            <a href="#" onclick="loadPage('contacts')">КОНТАКТЫ</a>
+            <a href="#" onclick="loadPage(event, 'home')">ГЛАВНАЯ</a> |
+            <a href="#" onclick="loadPage(event, 'timeline')">ХРОНОЛОГИЯ</a> |
+            <a href="#" onclick="loadPage(event, 'other')">ПРОЧЕЕ</a> |
+            <a href="#" onclick="loadPage(event, 'contacts')">КОНТАКТЫ</a>
         </div>
 
         <div id="main">
@@ -33,9 +33,18 @@
     </div>
 
     <script>
-        function loadPage(page) {
+        window.addEventListener('load', function() {
+            const savedScroll = localStorage.getItem('scrollPosition');
+            if (savedScroll !== null) {
+                window.scrollTo(0, parseInt(savedScroll));
+            }
+        });
+        function loadPage(event, page) {
+            if (event) {
+                event.preventDefault();
+            }
             const frame = document.getElementById('content-frame');
-            
+            localStorage.setItem('scrollPosition', window.scrollY);
             if (page === 'home') {
                 frame.src = 'pages/home.html';
             } else if (page === 'timeline') {
@@ -68,6 +77,8 @@
                 frame.src = 'pages/wii.html';
             } else if (page === 'ps3') {
                 frame.src = 'pages/ps3.html';
+            } else if (page === 'zeebo') {
+                frame.src = 'pages/zeebo.html';
             } else if (page === 're0ps3') {
                 frame.src = 'games/re0ps3.html';
             } else if (page === 're4ps3') {
@@ -211,6 +222,12 @@
             } else if (page === 'contacts') {
                 frame.src = 'pages/contacts.html';
             }
+            frame.onload = function() {
+                const savedScroll = localStorage.getItem('scrollPosition');
+                if (savedScroll !== null) {
+                    window.scrollTo(0, parseInt(savedScroll));
+                }
+            };
         }
     </script>
 
