@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resident Evil Archive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="container">
+        <div id="header">
+            <div class="logo">
+                <span class="logo-main">RESIDENT EVIL</span>
+                <span class="logo-sub">АРХИВ</span>
+            </div>
+        </div>
+
+        <div id="navbar">
+            <a href="#" onclick="loadPage('home')">ГЛАВНАЯ</a> |
+            <a href="#" onclick="loadPage('timeline')">ХРОНОЛОГИЯ</a> |
+            <a href="#" onclick="loadPage('other')">ПРОЧЕЕ</a> |
+            <a href="#" onclick="loadPage('contacts')">КОНТАКТЫ</a>
+        </div>
+
+        <div id="main">
+            <iframe id="content-frame" src="pages/home.html" style="width:100%; height:560px; border:none;"></iframe>
+        </div>
+
+        <div id="footer">
+            &copy; 2026 RESIDENT EVIL ARCHIVE. RETROACHIEVEMENTS.ORG
+        </div>
+    </div>
+
+    <script>
+        function loadPage(page) {
+            const frame = document.getElementById('content-frame');
+            
+            if (page === 'home') {
+                frame.src = 'pages/home.html';
+            } else if (page === 'timeline') {
+                frame.src = 'pages/timeline.html';
+            } else if (page === 'arcade') {
+                frame.src = 'pages/arcade.html';
+            } else if (page === 'dreamcast') {
+                frame.src = 'pages/dreamcast.html';
+            } else if (page === 'nds') {
+                frame.src = 'pages/nds.html';
+            } else if (page === 'gameboy') {
+                frame.src = 'pages/gameboy.html';
+            } else if (page === 'gbc') {
+                frame.src = 'pages/gbc.html';
+            } else if (page === 'gba') {
+                frame.src = 'pages/gba.html';
+            } else if (page === 'n64') {
+                frame.src = 'pages/n64.html';
+            } else if (page === 'nes') {
+                frame.src = 'pages/nes.html';
+            } else if (page === 'gamecube') {
+                frame.src = 'pages/gamecube.html';
+            } else if (page === 'saturn') {
+                frame.src = 'pages/saturn.html';
+            } else if (page === 'playstation') {
+                frame.src = 'pages/playstation.html';
+            } else if (page === 'playstation2') {
+                frame.src = 'pages/playstation2.html';
+            } else if (page === 'wii') {
+                frame.src = 'pages/wii.html';
+            } else if (page === 'ps3') {
+                frame.src = 'pages/ps3.html';
+            } else if (page === 're0ps3') {
+                frame.src = 'games/re0ps3.html';
+            } else if (page === 're4ps3') {
+                frame.src = 'games/re4ps3.html';
+            } else if (page === 're5ps3') {
+                frame.src = 'games/re5ps3.html';
+            } else if (page === 're6ps3') {
+                frame.src = 'games/re6ps3.html';
+            } else if (page === 'veronicaxps3') {
+                frame.src = 'games/veronicaxps3.html';
+            } else if (page === 'rehdps3') {
+                frame.src = 'games/rehdps3.html';
+            } else if (page === 'opracityps3') {
+                frame.src = 'games/opracityps3.html';
+            } else if (page === 'revelationsps3') {
+                frame.src = 'games/revelationsps3.html';
+            } else if (page === 'revelations2ps3') {
+                frame.src = 'games/revelations2ps3.html';
+            } else if (page === 'darksideps3') {
+                frame.src = 'games/darksideps3.html';
+            } else if (page === 'umbrellaps3') {
+                frame.src = 'games/umbrellaps3.html';
+            } else if (page === 'deadlysilence') {
+                frame.src = 'games/deadlysilence.html';
+            } else if (page === 're1gb') {
+                frame.src = 'games/re1gb.html';
+            } else if (page === 're1gbc') {
+                frame.src = 'games/re1gbc.html';
+            } else if (page === 'gaiden') {
+                frame.src = 'games/gaiden.html';
+            } else if (page === 'grimbeginnings') {
+                frame.src = 'games/grimbeginnings.html';
+            } else if (page === 're2gba') {
+                frame.src = 'games/re2gba.html';
+            } else if (page === 're2n64') {
+                frame.src = 'games/re2n64.html';
+            } else if (page === 're1nes') {
+                frame.src = 'games/re1nes.html';
+            } else if (page === 're1saturn') {
+                frame.src = 'games/re1saturn.html';
+            } else if (page === 're1gc') {
+                frame.src = 'games/re1gc.html';
+            } else if (page === 're0gc') {
+                frame.src = 'games/re0gc.html';
+            } else if (page === 're2gc') {
+                frame.src = 'games/re2gc.html';
+            } else if (page === 're2gczc') {
+                frame.src = 'games/re2gczc.html';
+            } else if (page === 're3gc') {
+                frame.src = 'games/re3gc.html';
+            } else if (page === 're4gc') {
+                frame.src = 'games/re4gc.html';
+            } else if (page === 'veronicagc') {
+                frame.src = 'games/veronicagc.html';
+            } else if (page === 're1ps') {
+                frame.src = 'games/re1ps.html';
+            } else if (page === 're0dps') {
+                frame.src = 'games/re0dps.html';
+            } else if (page === 're15ps') {
+                frame.src = 'games/re15ps.html';
+            } else if (page === 're15bcps') {
+                frame.src = 'games/re15bcps.html';
+            } else if (page === 're2dsps') {
+                frame.src = 'games/re2dsps.html';
+            } else if (page === 're3dips') {
+                frame.src = 'games/re3dips.html';
+            } else if (page === 're3hmps') {
+                frame.src = 'games/re3hmps.html';
+            } else if (page === 're3ps') {
+                frame.src = 'games/re3ps.html';
+            } else if (page === 're3oops') {
+                frame.src = 'games/re3oops.html';
+            } else if (page === 'redfps') {
+                frame.src = 'games/redfps.html';
+            } else if (page === 're1dcps') {
+                frame.src = 'games/re1dcps.html';
+            } else if (page === 'resps') {
+                frame.src = 'games/resps.html';
+            } else if (page === 'resrps') {
+                frame.src = 'games/resrps.html';
+            } else if (page === 'tnsps') {
+                frame.src = 'games/tnsps.html';
+            } else if (page === 'gunsur2ps2') {
+                frame.src = 'games/gunsur2ps2.html';
+            } else if (page === 're4ps2') {
+                frame.src = 'games/re4ps2.html';
+            } else if (page === 're4bps2') {
+                frame.src = 'games/re4bps2.html';
+            } else if (page === 're4noeps2') {
+                frame.src = 'games/re4noeps2.html';
+            } else if (page === 're4xeps2') {
+                frame.src = 'games/re4xeps2.html';
+            } else if (page === 're4womps2') {
+                frame.src = 'games/re4womps2.html';
+            } else if (page === 'veronicaps2') {
+                frame.src = 'games/veronicaps2.html';
+            } else if (page === 'redaps2') {
+                frame.src = 'games/redaps2.html';
+            } else if (page === 'reops2') {
+                frame.src = 'games/reops2.html';
+            } else if (page === 'reovhcps2') {
+                frame.src = 'games/reovhcps2.html';
+            } else if (page === 'reoomps2') {
+                frame.src = 'games/reoomps2.html';
+            } else if (page === 'reo2ps2') {
+                frame.src = 'games/reo2ps2.html';
+            } else if (page === 'reo2vhcps2') {
+                frame.src = 'games/reo2vhcps2.html';
+            } else if (page === 'reo2omps2') {
+                frame.src = 'games/reo2omps2.html';
+            } else if (page === 're4wii') {
+                frame.src = 'games/re4wii.html';
+            } else if (page === 're1wii') {
+                frame.src = 'games/re1wii.html';
+            } else if (page === 're0wii') {
+                frame.src = 'games/re0wii.html';
+            } else if (page === 'redcwii') {
+                frame.src = 'games/redcwii.html';
+            } else if (page === 'reucwii') {
+                frame.src = 'games/reucwii.html';
+            } else if (page === 'gunsur2') {
+                frame.src = 'games/gunsur2.html';
+            } else if (page === 'veronicadc') {
+                frame.src = 'games/veronicadc.html';
+            } else if (page === 're2dc') {
+                frame.src = 'games/re2dc.html';
+            } else if (page === 're2dcbonus') {
+                frame.src = 'games/re2dcbonus.html';
+            } else if (page === 're2dcse') {
+                frame.src = 'games/re2dcse.html';
+            } else if (page === 're3dc') {
+                frame.src = 'games/re3dc.html';
+            } else if (page === 're3dcbonus') {
+                frame.src = 'games/re3dcbonus.html';
+            } else if (page === 're3dcnemesis') {
+                frame.src = 'games/re3dcnemesis.html';
+            } else if (page === 're3dcspeedrun') {
+                frame.src = 'games/re3dcspeedrun.html';
+            } else if (page === 'other') {
+                frame.src = 'pages/other.html';
+            } else if (page === 'contacts') {
+                frame.src = 'pages/contacts.html';
+            }
+        }
+    </script>
+
+</body>
+</html>
